@@ -1,0 +1,43 @@
+package RECURSIONCONCEPTS;
+
+public class Prime {
+    // public static void prime(int n, int count){
+    //     if(n==0||n==1){
+    //         System.out.println("not a prime number");
+    //         return;
+    //     }
+    //     if(count==n/2){
+    //         if(n%count==0){
+    //         System.out.println("not prime number");
+    //         return;
+    //         }
+    //         else{
+    //         System.out.println("is prime number");
+            
+    //         }
+    //         return;
+    //     }
+        
+    //     prime(n, count+1);
+    // }
+    public static boolean  prime(int n, int count){
+        //not done
+        if(count<=n){
+            return true;
+        }
+        if(n%count==0){
+            return true;
+        }
+        return  prime(n,count++);
+        
+    }
+    public static void main(String[] args) {
+        // prime(7);
+        boolean result=prime(8, 2);
+        if (result) {
+            System.out.println("is prime");
+        } else {
+            System.out.println("not a prime");
+        }
+    }
+}
