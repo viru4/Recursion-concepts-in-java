@@ -13,24 +13,20 @@ public class BinaryToDecimal {
         
     //     decimal(n/10, result, count+1);
     // }
-    public static int decimal(int n){
+    public static int decimal(int n, int count){
         if (n==0) {
-            return n;
+            return 0;
         }
-        
-        int count=0;
-        
-        int result=decimal(n/10);
+        int result=decimal(n/10, count+1);
         int digit=n%10;
         if (digit==1) {
             result=result+(int) Math.pow(2, count);
-            count++;
         }
         return result;
     }
     public static void main(String[] args) {
         // decimal(101010, 0, 0);
-        int result=decimal(101010);
+        int result=decimal(101010, 0);
         System.out.println(result);
     }
 }

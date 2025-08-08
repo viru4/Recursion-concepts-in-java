@@ -21,19 +21,18 @@ public class Prime {
     //     prime(n, count+1);
     // }
     public static boolean  prime(int n, int count){
-        //not done
-        if(count<=n){
+        if(count==n/2){
             return true;
         }
         if(n%count==0){
-            return true;
+            return false;
         }
-        return  prime(n,count++);
+        return prime(n, count+1);
         
     }
     public static void main(String[] args) {
         // prime(7);
-        boolean result=prime(8, 2);
+        boolean result=prime(14, 2);
         if (result) {
             System.out.println("is prime");
         } else {
