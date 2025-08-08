@@ -1,6 +1,7 @@
 package RECURSIONCONCEPTS;
 
 public class Prime {
+    //method 1 by returning no value
     // public static void prime(int n, int count){
     //     if(n==0||n==1){
     //         System.out.println("not a prime number");
@@ -40,3 +41,4 @@ public class Prime {
         }
     }
 }
+
