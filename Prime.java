@@ -21,6 +21,7 @@ public class Prime {
         
     //     prime(n, count+1);
     // }
+    // method 2 using boolean method 
     public static boolean  prime(int n, int count){
         if(count==n/2){
             return true;
@@ -41,4 +42,5 @@ public class Prime {
         }
     }
 }
+
 
